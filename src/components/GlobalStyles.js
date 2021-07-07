@@ -5,7 +5,11 @@ const GlobalStyles = createGlobalStyle`
     margin:0;
     padding:0;
     box-sizing:border-box;
+    @media screen and (max-width: 768px) {	
+        width:70%;  
+	}
 }
+
 html{
     &::-webkit-scrollbar{
         width: 0.5rem;
@@ -18,8 +22,10 @@ html{
 	}
 }
 body{
+    
     font-family: 'Montserrat' , sans-serif;
     width: 100%;
+   
 }
 h2{
     font-size:3rem;

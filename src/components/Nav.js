@@ -49,6 +49,10 @@ const StyledNav = styled(motion.div)`
 		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
 		font-weight: bold;
 		font-family: 'Montserrat', sans-serif;
+		@media screen and (max-width: 768px) {
+			padding: 0rem;
+			width: 200px;
+		}
 	}
 	button {
 		font-size: 1.5rem;
@@ -57,6 +61,11 @@ const StyledNav = styled(motion.div)`
 		cursor: pointer;
 		background: #779b52;
 		color: white;
+		@media screen and (max-width: 768px) {
+			width: 60%;
+			font-size: 100%;
+			width: 100px;
+		}
 	}
 `;
 const Logo = styled(motion.div)`

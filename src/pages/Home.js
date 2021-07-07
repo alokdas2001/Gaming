@@ -96,6 +96,9 @@ const GameList = styled(motion.div)`
 	h2 {
 		padding: 5rem 0rem;
 	}
+	@media screen and (max-width: 768px) {
+		padding: 0rem 0rem 0rem 2rem;
+	}
 `;
 
 const GamesData = styled(motion.div)`

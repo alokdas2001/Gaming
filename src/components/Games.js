@@ -23,7 +23,7 @@ const Game = ({ name, released, id, image }) => {
 			animate="show"
 			onClick={loadDetailHandler}
 		>
-			<Link to={`/game/${id}`}>
+			<Link to={`/game/${id}`} className="game_details">
 				<motion.h3>{name}</motion.h3>
 				<p> {released} </p>
 				<img src={smallImage(image, 640)} alt={name} />
@@ -43,6 +43,16 @@ const StyledGame = styled(motion.div)`
 		width: 100%;
 		height: 60vh;
 		object-fit: cover;
+	}
+	@media screen and (max-width: 768px) {
+		p {
+			font-size: 25px;
+		}
+		img {
+			width: 100%;
+			height: 30vh;
+			object-fit: cover;
+		}
 	}
 `;
 

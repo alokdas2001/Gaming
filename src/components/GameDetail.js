@@ -152,6 +152,9 @@ const Detail = styled(motion.div)`
 	img {
 		width: 100%;
 	}
+	@media screen and (max-width: 768px) {
+		padding: 0rem;
+	}
 `;
 
 const Stats = styled(motion.div)`
@@ -162,6 +165,15 @@ const Stats = styled(motion.div)`
 		width: 2rem;
 		height: 2rem;
 		display: inline;
+	}
+	@media screen and (max-width: 768px) {
+		display: inline;
+		.rating {
+			img {
+				height: 1.5rem;
+				width: 1.5rem;
+			}
+		}
 	}
 `;
 
@@ -176,6 +188,9 @@ const Platforms = styled(motion.div)`
 		margin-left: 3rem;
 		width: 3rem;
 	}
+	@media screen and (max-width: 768px) {
+		display: inline;
+	}
 `;
 
 const Media = styled(motion.div)`
@@ -183,15 +198,39 @@ const Media = styled(motion.div)`
 	img {
 		width: 100%;
 	}
+	@media screen and (max-width: 768px) {
+		img {
+			padding: 1rem;
+			width: 140%;
+			height: 35vh;
+			object-fit: cover;
+		}
+	}
 `;
 
 const Description = styled(motion.div)`
 	margin: 5rem 0rem;
+	@media screen and (max-width: 768px) {
+		display: inline;
+		text-align: center;
+
+		p {
+			font-size: 1rem;
+		}
+	}
 `;
 
 const Gallery = styled(motion.div)`
 	img {
 		padding: 0rem 0rem 2rem 0rem;
+	}
+	@media screen and (max-width: 768px) {
+		img {
+			padding: 1rem;
+			width: 140%;
+			height: 35vh;
+			object-fit: cover;
+		}
 	}
 `;
 
