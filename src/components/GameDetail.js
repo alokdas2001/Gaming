@@ -17,20 +17,21 @@ import xbox_sx from '../img/xbox_sx.svg';
 // STAR IMAGES
 import starEmpty from '../img/starEmpty.png';
 import starFull from '../img/starFull.png';
+import jQuery from 'jquery';
 
 const GameDetail = ({ pathId }) => {
 	const history = useHistory();
 	//Exit Detail
 	const exitDetailHandler = (e) => {
-		// getting the ele which u clicked
-		const element = e.target;
-		// getting the name of the class
-		if (element.classList.contains('shadow')) {
-			// changing the overflow rule
-			document.body.style.overflow = 'auto';
-			// change the router to normal
-			history.push('/');
-		}
+		document.body.style.overflow = 'auto';
+		history.push('/');
+		jQuery(document).ready(function ($) {
+			if (window.history && window.history.pushState) {
+				$(window).on('popstate', function () {
+					document.body.style.overflow = 'auto';
+				});
+			}
+		});
 	};
 
 	//GET STARS
