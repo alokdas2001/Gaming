@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
     margin:0;
     padding:0;
     box-sizing:border-box;
+   
     @media screen and (max-width: 768px) {	
         width:70%;  
 	}
@@ -25,22 +26,26 @@ body{
     
     font-family: 'Montserrat' , sans-serif;
     width: 100%;
+    background-color: #181a1b;
    
 }
 h2{
     font-size:3rem;
     font-family: 'Abril Fatface' , cursive;
     font-weight: lighter;
+    color:#E8E6E3;
 }
 h3{
     font-size: 1.3rem;
     color:#333;
     padding:1.5rem 0rem;
+    color:#E8E6E3;
 }
 p{
     font-size: 1.2rem;
     line-height: 200%;
-    color:#696969
+    color:#E8E6E3;
+    
 }
 a{
     text-decoration: none;

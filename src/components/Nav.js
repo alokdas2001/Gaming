@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 //styling
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import logo from '../img/logo.svg';
+import logo from '../img/logo.png';
 // redux and routes
 import { fetchSearch } from '../actions/gamesAction';
 import { useDispatch } from 'react-redux';
@@ -43,7 +43,7 @@ const StyledNav = styled(motion.div)`
 	input {
 		width: 30%;
 		font-size: 1.5rem;
-		padding: 0.5rem;
+		padding: 0.4rem 0.5rem 0.4rem 0.5rem;
 		border: none;
 		margin-top: 1rem;
 		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
@@ -61,6 +61,7 @@ const StyledNav = styled(motion.div)`
 		cursor: pointer;
 		background: #779b52;
 		color: white;
+
 		@media screen and (max-width: 768px) {
 			width: 60%;
 			font-size: 100%;

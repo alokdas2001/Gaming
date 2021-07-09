@@ -7,8 +7,9 @@ import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { smallImage } from '../util';
 // IMAGES
-import playstation from '../img/playstation.svg';
-import pc from '../img/pc.svg';
+import playstation from '../img/playstation.png';
+import ps5 from '../img/ps5.svg';
+import pc from '../img/computer.png';
 import xbox from '../img/xbox.svg';
 import nintendo from '../img/nintendo.svg';
 import apple from '../img/apple.svg';
@@ -23,8 +24,12 @@ const GameDetail = ({ pathId }) => {
 	const history = useHistory();
 	//Exit Detail
 	const exitDetailHandler = (e) => {
-		document.body.style.overflow = 'auto';
-		history.push('/');
+		const element = e.target;
+		if (element.classList.contains('shadow')) {
+			document.body.style.overflow = 'auto';
+			history.push('/');
+		}
+
 		jQuery(document).ready(function ($) {
 			if (window.history && window.history.pushState) {
 				$(window).on('popstate', function () {
@@ -55,7 +60,7 @@ const GameDetail = ({ pathId }) => {
 			case 'PlayStation 4':
 				return playstation;
 			case 'PlayStation 5':
-				return playstation;
+				return ps5;
 			case 'Xbox One':
 				return xbox;
 			case 'Xbox Series S/X':
@@ -128,6 +133,7 @@ const CardShadow = styled(motion.div)`
 	min-height: 100vh;
 	overflow-y: scroll;
 	background: rgba(0, 0, 0, 0.5);
+
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -146,7 +152,7 @@ const Detail = styled(motion.div)`
 	width: 80%;
 	border-radius: 1rem;
 	padding: 2rem 6rem;
-	background: white;
+	background-color: #181a1b;
 	position: absolute;
 	left: 10%;
 	color: black;

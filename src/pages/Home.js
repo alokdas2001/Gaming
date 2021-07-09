@@ -102,6 +102,7 @@ const GameList = styled(motion.div)`
 `;
 
 const GamesData = styled(motion.div)`
+	background-color: #181a1b;
 	min-height: 80vh;
 	display: grid;
 	grid-template-columns: repeat(
