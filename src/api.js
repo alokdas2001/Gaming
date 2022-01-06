@@ -11,6 +11,9 @@ if (dd < 10) {
 	//if less then 10 add a leading zero
 	dd = '0' + dd;
 }
+if (mm === 0) {
+	mm = '1';
+}
 if (mm < 10) {
 	mm = '0' + mm; //if less then 10 add a leading zero
 }
